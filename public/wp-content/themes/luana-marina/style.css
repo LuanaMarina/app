@@ -1,0 +1,69 @@
+/*
+Theme Name: Luana Marina
+Text Domain: luanamarina
+Author: Luana
+Author URI: https://www.linkedin.com/in/luanamp/
+Description: Luana Marina este o temă minimalistă și rafinată, creată pentru a aduce un stil unic și personal site-urilor. Cu un design aerisit și flexibil, tema oferă o structură modernă.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: luanamarina
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* My Logo */
+.custom-logo {
+    width: 70px;
+    height: auto;
+}
+  
+/* My Navbar */
+.my_navbar .nav-item {
+    margin: .5em 1em;
+    padding: 0;
+}
+  
+.my_navbar .nav-link {
+    padding: .5em .8em;
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.my_navbar .nav-link::before,
+.my_navbar .nav-link::after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+  
+.my_navbar .nav-link::before {
+    right: 0;
+    top: 0;
+    border-top: 3px solid #157347;
+    border-right: 3px solid #157347;
+    transform: translate(-100%, 50%);
+}
+  
+.my_navbar .nav-link::after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #157347;
+    border-left: 3px solid #157347;
+    transform: translate(100%, -50%);
+}
+
+.my_navbar .nav-link:hover::before,
+.my_navbar .nav-link:hover::after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+  
+.my_navbar .nav-link:hover {
+    color: #157347;
+}
