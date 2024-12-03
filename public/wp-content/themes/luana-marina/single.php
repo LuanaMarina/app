@@ -9,9 +9,7 @@
 
         <?php } ?>
 
-        <nav>
-            <?php echo paginate_links(); ?>
-        </nav>
+        <?php get_template_part('template-parts/pagination/pagination', 'links'); ?>
     
     <?php }
 ?>

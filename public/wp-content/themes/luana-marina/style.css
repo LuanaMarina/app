@@ -67,3 +67,191 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .my_navbar .nav-link:hover {
     color: #157347;
 }
+
+/* Stilizare preloader */
+#loadHeart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25,135,84, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.lds-heart,
+.lds-heart div,
+.lds-heart div:after,
+.lds-heart div:before {
+    box-sizing: border-box;
+}
+
+.lds-heart {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+    top: 28px;
+    left: 28px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: currentColor;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: currentColor;
+}
+
+.lds-heart div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95);
+    }
+    5% {
+        transform: scale(1.1);
+    }
+    39% {
+        transform: scale(0.85);
+    }
+    45% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/* Start Carousel Banner */
+
+    .banner {
+        height: 85vh;
+    }
+
+    .slider {
+        width: 200px;
+        height: 250px;
+        top: 10%;
+        left: calc(50% - 100px);
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        animation: autoRun 50s linear infinite;
+    }
+
+    @keyframes autoRun {
+        from {
+            transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+        } to{
+            transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+        }
+    }
+
+    .slider-item {
+        inset: 0 0 0 0;
+        transform: 
+            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(550px);
+    }
+
+    @media (max-width: 992px) {
+        .banner {
+            height: 75vh;
+        }
+
+        .slider {
+            width: 180px;
+            height: 220px;
+            left: calc(50% - 90px);
+        }
+
+        .slider-item {
+            transform: 
+                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                translateZ(500px);
+        }
+
+        img {
+            border-width: 2px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .banner {
+            height: 65vh;
+        }
+
+        .slider {
+            width: 150px;
+            height: 200px;
+            left: calc(50% - 75px);
+        }
+
+        .slider-item {
+            transform: 
+                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                translateZ(400px);
+        }
+
+        img {
+            border-width: 2px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .banner {
+            height: 55vh;
+        }
+
+        .slider {
+            width: 120px;
+            height: 160px;
+            left: calc(50% - 60px);
+        }
+
+        .slider-item {
+            transform: 
+                rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+                translateZ(300px);
+        }
+
+        img {
+            border-width: 1px;
+        }
+    }
+/* End Carousel Banner */
+
+#unicodeIcon {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotated {
+    transform: rotate(360deg);
+}

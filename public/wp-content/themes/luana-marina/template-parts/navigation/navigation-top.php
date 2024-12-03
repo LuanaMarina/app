@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-success-subtle">
     <div class="container-fluid">
         <div class="navbar-brand-wrapper">
             <?php

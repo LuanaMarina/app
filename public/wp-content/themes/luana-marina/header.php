@@ -10,6 +10,11 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+        <div class="load_heart" id="loadHeart">
+            <div class="lds-heart">
+                <div></div>
+            </div>
+        </div>
 
         <?php get_template_part('template-parts/navigation/navigation', 'top'); ?>
         
